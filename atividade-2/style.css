@@ -4,14 +4,17 @@ body {
     margin: 0;
     padding: 20px;
     color: #333;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: #333;
     text-align: center;
 }
 
-div {
+.container {
     background-color: #fff;
     padding: 15px;
     margin: 15px 0;
@@ -19,12 +22,12 @@ div {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-ul#lista-produtos {
+ul#lista-carrinho {
     list-style-type: none;
     padding: 0;
 }
 
-ul#lista-produtos li {
+ul#lista-carrinho li {
     background-color: #fafafa;
     margin: 10px 0;
     padding: 10px;
@@ -35,7 +38,7 @@ ul#lista-produtos li {
     align-items: center;
 }
 
-button {
+.btn {
     background-color: #007bff;
     color: white;
     border: none;
@@ -43,45 +46,40 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+    transition: background-color 0.3s;
 }
 
-button:hover {
+.btn:hover {
     background-color: #0056b3;
 }
 
-input[type="text"], input[type="number"] {
+input[type="text"],
+input[type="number"] {
     padding: 8px;
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: calc(100% - 18px); 
+    width: calc(100% - 18px);
 }
 
-button:focus, input:focus {
+input:focus,
+.btn:focus {
     outline: none;
     border-color: #007bff;
 }
 
-body {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-button {
-    transition: background-color 0.3s;
-}
-
-button.remover {
+.btn.remover {
     background-color: #dc3545;
 }
 
-button.remover:hover {
+.btn.remover:hover {
     background-color: #c82333;
 }
 
 @media (max-width: 600px) {
-    div, ul#lista-produtos li {
+
+    .container,
+    ul#lista-carrinho li {
         flex-direction: column;
     }
 }
